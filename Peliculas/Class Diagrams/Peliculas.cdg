@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Peliculas">
+  <ClassDiagramComponents>
+    <Class name="Usuario" package="" visibility="public" xPosition="622.0" yPosition="396.0">
+      <Fields>
+        <Field name="Nombre" type="Object" visibility="private"/>
+        <Field name="Password" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Login" returnType="void" visibility="public"/>
+        <Method name="Cerra_Seccion" returnType="void" visibility="public"/>
+        <Method name="Registrarse" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Registrarse" package="" visibility="public" xPosition="864.0" yPosition="680.0">
+      <Fields>
+        <Field name="Usuario" type="Object" visibility="private"/>
+        <Field name="Password" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Crear_Usuario" returnType="void" visibility="public"/>
+        <Method name="Crear_Password" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Mis Puntuaciones" package="" visibility="public" xPosition="867.0" yPosition="415.0">
+      <Fields>
+        <Field name="Pelicula" type="Object" visibility="private"/>
+        <Field name="Puntuacion" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Puntuar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Login" package="" visibility="public" xPosition="611.0" yPosition="680.0">
+      <Fields>
+        <Field name="Usuario" type="Object" visibility="private"/>
+        <Field name="Password" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Introducir_Usuario" returnType="void" visibility="public"/>
+        <Method name="Introducir_Password" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Bucar Pelicuals" package="" visibility="public" xPosition="289.0" yPosition="330.0">
+      <Fields>
+        <Field name="Nombre" type="Object" visibility="private"/>
+        <Field name="Genero" type="Object" visibility="private"/>
+        <Field name="Director" type="Object" visibility="private"/>
+        <Field name="Todos_los_publicos" type="Object" visibility="private"/>
+        <Field name="Estreno" type="Object" visibility="private"/>
+        <Field name="Puntuacion" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Intruducir_titulo" returnType="void" visibility="public"/>
+        <Method name="Seleccionar_genero" returnType="void" visibility="public"/>
+        <Method name="Intruducir_Director" returnType="void" visibility="public"/>
+        <Method name="Seleccionar_puntuacion" returnType="void" visibility="public"/>
+        <Method name="Buscar" returnType="void" visibility="public"/>
+        <Method name="Borrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pelicula" package="" visibility="public" xPosition="16.0" yPosition="330.0">
+      <Fields>
+        <Field name="Nombre" type="Object" visibility="private"/>
+        <Field name="Genero" type="Object" visibility="private"/>
+        <Field name="Director" type="Object" visibility="private"/>
+        <Field name="Estreno" type="Object" visibility="private"/>
+        <Field name="Publico" type="Object" visibility="private"/>
+        <Field name="Puntuacion_Media" type="Object" visibility="private"/>
+        <Field name="Mi_puntuacion_actual" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Introducir_puntuacion" returnType="void" visibility="public"/>
+        <Method name="Introducir_comentario" returnType="void" visibility="public"/>
+        <Method name="Puntuar" returnType="void" visibility="public"/>
+        <Method name="Ver_imagen" returnType="void" visibility="public"/>
+        <Method name="Ver_todos_los_comentarios" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Añadir Pelicula" package="" visibility="public" xPosition="609.0" yPosition="23.0">
+      <Fields>
+        <Field name="Nombre" type="Object" visibility="private"/>
+        <Field name="Director" type="Object" visibility="private"/>
+        <Field name="Genero" type="Object" visibility="private"/>
+        <Field name="Todos_los_publicos" type="Object" visibility="private"/>
+        <Field name="Estrenada" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Insertar_Nombre" returnType="void" visibility="public"/>
+        <Method name="Insertar_Director" returnType="void" visibility="public"/>
+        <Method name="Seleccionar_Genero" returnType="void" visibility="public"/>
+        <Method name="Guardar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Pelicula" target="Bucar Pelicuals"/>
+    <IsRelation name="is" source="Registrarse" target="Login"/>
+    <IsRelation name="is" source="Login" target="Usuario"/>
+    <HasRelation name="Ve" source="Mis Puntuaciones" target="Usuario" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <IsRelation name="is" source="Añadir Pelicula" target="Usuario"/>
+    <HasRelation name="Busca" source="Bucar Pelicuals" target="Usuario" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
